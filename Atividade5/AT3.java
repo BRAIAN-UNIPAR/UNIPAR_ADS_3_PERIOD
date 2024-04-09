@@ -1,22 +1,34 @@
-package br.unipar.main;
-
 import java.util.Scanner;
 
-public class ExempleDoWhile {
-
-
+public class IdadeEmDias {
+    
     public static void main(String[] args) {
-        int opcao = 0;
-
+        
         Scanner scanner = new Scanner(System.in);
-
-        do {
-            System.out.println("Para continuar informe 0");
-            opcao = scanner.nextInt();
-
-        } while (opcao == 0);
-        System.out.println("Voce saiu");
-
+        
+        System.out.print("Digite a idade em anos: ");
+        int anos = scanner.nextInt();
+        
+        System.out.print("Digite a idade em meses: ");
+        int meses = scanner.nextInt();
+        
+        System.out.print("Digite a idade em dias: ");
+        int dias = scanner.nextInt();
+        
+        scanner.close();
+        
+        int idadeEmDias = calcularIdadeEmDias(anos, meses, dias);
+        
+        System.out.println("A idade expressa em dias e: " + idadeEmDias + " dias.");
+    }
+    
+    public static int calcularIdadeEmDias(int anos, int meses, int dias) {
+        int idadeEmDias = 0;
+        
+        idadeEmDias += anos * 365;
+        idadeEmDias += meses * 30;
+        idadeEmDias += dias;
+        
+        return idadeEmDias;
     }
 }
-
