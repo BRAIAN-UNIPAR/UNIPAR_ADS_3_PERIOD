@@ -9,7 +9,6 @@ public class ContaCorrente extends HerencaContaBancaria {
             saldo -= valor;
             return true;
         }
-
         return false;
     }
 }
