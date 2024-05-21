@@ -5,7 +5,7 @@ public class ContaCorrente extends HerencaContaBancaria {
     @Override
     public boolean saque(Double valor) {
 
-        if (saldo >= valor){
+        if (saldo >= valor) {
             saldo -= valor;
             return true;
         }
